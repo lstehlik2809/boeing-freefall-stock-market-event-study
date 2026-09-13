@@ -8,7 +8,7 @@ A fresh Git clone of the prepared repository was created with its own virtual en
 
 All ten regenerated numerical result tables matched the existing results byte for byte, and every array in all four regenerated posterior archives matched exactly. The clean-clone test suite passed **54 tests in 38.31 seconds**, including the network-blocked rerun and reconstruction without derived outputs. Ruff and the lock-file check passed. README, data guide, validation, and results-report relative links resolved. The versioned file selection excludes raw/processed market CSVs, virtual environments, build artifacts, and internal implementation notes.
 
-The committed `outputs/logs/reproducibility.json` is copied from this verified clone and records its actual analyzed Git commit, environment, input hashes, and source-file hashes. Later documentation-only commits may follow that analyzed commit. This verification used Windows / Python 3.10.7; it does not add an untested cross-platform claim.
+At initial publication, `outputs/logs/reproducibility.json` was copied from this verified clone. The log is refreshed as the project changes and records the current run's Git commit, working-tree status, environment, input hashes, and source-file hashes. The recorded commit can precede the commit of generated artifacts; consult the working-tree status and hashes as well. This verification used Windows / Python 3.10.7; it does not add an untested cross-platform claim.
 
 ## Approximate-reference audit
 

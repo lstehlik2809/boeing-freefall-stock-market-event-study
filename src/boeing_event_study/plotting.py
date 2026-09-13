@@ -171,6 +171,68 @@ def make_linkedin_comparative_car(root):
         plt.close(fig)
 
 
+def make_linkedin_freefall(root):
+    """Standalone Freefall CAR illustration, computed from saved predictive draws."""
+    from matplotlib.lines import Line2D
+    from matplotlib.patches import Patch
+
+    root = Path(root)
+    with np.load(root / "outputs/posterior/netflix.npz") as draws:
+        mask = (draws["relative_days"] >= 0) & (draws["relative_days"] <= 10)
+        days = draws["relative_days"][mask]
+        ar = draws["ar_predictive"][:, mask]
+    if not np.array_equal(days, np.arange(11)) or not np.isfinite(ar).all():
+        raise ValueError("Freefall chart requires finite predictive draws for days 0 through +10")
+    low, median, high = np.quantile(ar.cumsum(axis=1), [.025, .5, .975], axis=0)
+    ink, muted, teal = "#192D3A", "#60717D", "#008879"
+    with plt.rc_context({"font.family": "DejaVu Sans", "svg.fonttype": "none"}):
+        fig = plt.figure(figsize=(10, 10), facecolor="white")
+        fig.text(.075, .947, "FREEFALL: A RECKONING FOR BOEING", fontsize=11,
+                 fontweight="bold", color=teal)
+        fig.text(.075, .884, "Did Freefall move", fontsize=31, fontweight="bold", color=ink)
+        fig.text(.075, .829, "Boeing’s share price?", fontsize=31, fontweight="bold", color=ink)
+        fig.text(.075, .779, "Around the Netflix release · 19 August 2026", fontsize=13, color=muted)
+        fig.legend(handles=[Line2D([0], [0], color=teal, linewidth=3, label="Estimated cumulative abnormal return"),
+                            Patch(facecolor=teal, alpha=.16, edgecolor="none",
+                                  label="95% predictive credible interval")],
+                   loc="upper left", bbox_to_anchor=(.066, .752), frameon=False,
+                   fontsize=11, labelspacing=.7)
+
+        ax = fig.add_axes([.135, .347, .795, .325])
+        ax.fill_between(days, low, high, color=teal, alpha=.16, linewidth=0)
+        ax.axhline(0, color=muted, linewidth=1, zorder=2)
+        ax.plot(days, median, color=teal, linewidth=3, zorder=3)
+        add_car_baseline(ax, days, median, teal, linewidth=2)
+        ax.plot(days[-1], median[-1], "o", color=teal, markersize=6)
+        ax.set(xlim=(-1.3, 10.2), ylim=(-.15, .15), yticks=[-.15, -.10, -.05, 0, .05, .10, .15])
+        ax.yaxis.set_major_formatter(PercentFormatter(1, decimals=0))
+        ax.tick_params(axis="both", labelsize=11, colors=muted, length=0, pad=8)
+        ax.grid(axis="y", color="#E4EBEE", linewidth=.7)
+        ax.set_axisbelow(True)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+        ax.set_xlabel("Trading days from Netflix release", fontsize=12, color=ink, labelpad=13)
+
+        fig.text(.075, .220, "No clear market response detected", fontsize=20, fontweight="bold", color=ink)
+        estimate = f"{median[-1]:+.1%}".replace("-", "−")
+        interval = f"{low[-1]:+.1%} to {high[-1]:+.1%}".replace("-", "−")
+        fig.text(.075, .176, f"Through day +10: median {estimate} · 95% interval {interval}",
+                 fontsize=13, color=teal, fontweight="bold")
+        fig.text(.075, .137, "The uncertainty allows both losses and gains; this does not establish no effect.",
+                 fontsize=11, color=muted)
+        fig.text(.075, .087, "Before event: preceding close, set to zero. Day 0 includes that day’s return.",
+                 fontsize=10, color=muted)
+        fig.text(.075, .060, "Returns relative to a market-and-sector model. Overlapping news limits causal attribution.",
+                 fontsize=9.5, color=muted)
+        fig.text(.075, .032, "Source: frozen Boeing event study · 4,000 posterior draws · Median and predictive uncertainty",
+                 fontsize=9, color=muted)
+        output = root / "outputs/figures"
+        output.mkdir(parents=True, exist_ok=True)
+        for suffix in ("png", "svg"):
+            fig.savefig(output / f"linkedin_freefall_car.{suffix}", dpi=200, facecolor="white")
+        plt.close(fig)
+
+
 def make_figures(root):
     root = Path(root)
     _, events = load_config(root)
@@ -239,3 +301,4 @@ def make_figures(root):
     save_figure(fig, root, "supplement_sampler_traces")
     make_linkedin_chart(root)
     make_linkedin_comparative_car(root)
+    make_linkedin_freefall(root)
