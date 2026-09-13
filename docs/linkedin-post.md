@@ -48,9 +48,4 @@ There are also several plausible reasons why even investors who were negatively 
 
 To sum it up, my initial hypothesis - driven by my own powerful personal experience - was that the documentary might produce a visible negative market response, but the data did not provide convincing support for that specific hypothesis. However, the absence of a detectable effect on stock price does not establish that other outcomes were unaffected. The natural next question to investigate would thus be whether Freefall changed trust in Boeing as a company, willingness to work there, willingness to fly on its aircraft, perceptions of its leadership, and the strength of its employer and consumer brand. Those outcomes may be much closer to the mechanism the documentary could affect.
 
-
-
-
-
-
-
+P.S. For reproducibility, you can find the data sources, scripts, results, and step-by-step instructions for reproducing this analysis on GitHub: https://github.com/lstehlik2809/boeing-freefall-stock-market-event-study
