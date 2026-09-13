@@ -1,10 +1,10 @@
 {
-  "analysis_timestamp_utc": "2026-09-13T07:59:52.641208+00:00",
+  "analysis_timestamp_utc": "2026-09-13T08:08:54.346826+00:00",
   "python_version": "3.10.7 (tags/v3.10.7:6cc6b13, Sep  5 2022, 14:08:36) [MSC v.1933 64 bit (AMD64)]",
   "platform": "Windows-10-10.0.26200-SP0",
   "random_seed": 20260912,
-  "git_commit": null,
-  "git_status": "not a Git repository",
+  "git_commit": "4af270ca15db471e2f1712ab7df578593b3c9267",
+  "git_status": "M outputs/figures/abnormal_volume.svg\n M outputs/figures/comparative_car.svg\n M outputs/figures/event_window_forest.svg\n M outputs/figures/linkedin_comparative_car_vertical.svg\n M outputs/figures/linkedin_three_day_forest.svg\n M outputs/figures/supplement_sampler_traces.svg\n M outputs/logs/netflix_predictive_mc_diagnostic.json\n M outputs/logs/reproducibility.json",
   "packages": {
     "numpy": "2.2.6",
     "pandas": "2.3.3",
@@ -57,11 +57,11 @@
     ".python-version": "7a41a41354ab8049091ef1a00253ca00567f5a1d3f9aef5502c0b4b5ce9ae707",
     ".gitattributes": "970ab6b0e78aa0f9d6fd9ab13395ce4d3b94275d8ac41b6e2de8a65ea44e0591",
     "report.py": "a1f8d65a75ece077b3fa8d2a6684bf27156cb5681c63be947fe18be2a84a49ad",
-    "README.md": "16ca7b78dc5030a4208861de8ed14b00bdd483f4dfaf28bbabcc08c76cf38cf0",
+    "README.md": "fd9e91485791b062f763944b0faa87bd520621839cfab86d3a5ede9070b20c40",
     "LICENSE": "94f2e9231a221786df1966aae56782126a9ed459979e0902fd9a8d24a60756b9",
-    "CITATION.cff": "fbef47e2ec33bf7b2c7ebab51bf1b70bc89d0dc8b63d5a4d04344305562faf82",
+    "CITATION.cff": "5cf1b2748ad4b7dc84c1275cac01b855e6c866a666534caa46d02a6d46b0dee8",
     "report/sources/contamination_research.md": "59494526c7bd1b26c820b8c9edfd0d8ce2709ba893de28791a9c0f51a4bce6ba",
-    "report/sources/provenance.md": "f871f9226533ebaddd2f4a9e830c1ce83c2793218aa4556dd54dc3514f9e724d"
+    "report/sources/provenance.md": "6bec70b827ef21a6bca6b251429f425eb8549c7903de0d670a540cf6601dacf0"
   },
   "analysis_config": {
     "seed": 20260912,

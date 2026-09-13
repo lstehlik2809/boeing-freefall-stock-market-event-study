@@ -2,6 +2,14 @@
 
 Initial analysis validation: 2026-09-12, with subsequent illustration updates on 2026-09-13. This document preserves the original numerical audit. The public repository now provides the software, result artifacts, and data reconstruction metadata described in the README. Repository publication does not publish the post to LinkedIn.
 
+## Publication verification — 2026-09-13
+
+A fresh Git clone of the prepared repository was created with its own virtual environment and **no raw or processed market CSVs**. `python -m uv sync --locked` succeeded, followed by the documented online `python -m uv run --locked python scripts/run_all.py`. All eight raw files were acquired from the pinned upstream URLs and passed the committed manifest checks. The complete pipeline succeeded with the expected 51/52 checks plus the documented reviewed difference.
+
+All ten regenerated numerical result tables matched the existing results byte for byte, and every array in all four regenerated posterior archives matched exactly. The clean-clone test suite passed **54 tests in 38.31 seconds**, including the network-blocked rerun and reconstruction without derived outputs. Ruff and the lock-file check passed. README, data guide, validation, and results-report relative links resolved. The versioned file selection excludes raw/processed market CSVs, virtual environments, build artifacts, and internal implementation notes.
+
+The committed `outputs/logs/reproducibility.json` is copied from this verified clone and records its actual analyzed Git commit, environment, input hashes, and source-file hashes. Later documentation-only commits may follow that analyzed commit. This verification used Windows / Python 3.10.7; it does not add an untested cross-platform claim.
+
 ## Approximate-reference audit
 
 The initial production run stopped at the preset numerical diagnostic gate. **51 of 52 reference checks passed.** The remaining check was:
