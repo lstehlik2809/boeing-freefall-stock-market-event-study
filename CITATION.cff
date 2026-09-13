@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite this software and identify the frozen data revision and analysis configuration used."
+title: "Did Netflix's Freefall Move Boeing's Stock? A Bayesian Event Study"
+type: software
+authors:
+  - family-names: "Stehlik"
+    given-names: "Ludek"
+version: 0.1.0
+date-released: 2026-09-13
+repository-code: "https://github.com/lstehlik2809/boeing-freefall-stock-market-event-study"
+url: "https://github.com/lstehlik2809/boeing-freefall-stock-market-event-study"
+license: MIT
+abstract: >-
+  Reproducible Student-t Bayesian counterfactual event study of Boeing returns
+  around the January 2024 Alaska Airlines incident, June 2024 Senate hearing,
+  and August 2026 Freefall documentary releases. Includes predictive and
+  parameter-only uncertainty, OLS, residual-block placebos, and trading volume.

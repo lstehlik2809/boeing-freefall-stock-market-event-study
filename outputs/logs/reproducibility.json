@@ -1,0 +1,139 @@
+{
+  "analysis_timestamp_utc": "2026-09-13T07:59:52.641208+00:00",
+  "python_version": "3.10.7 (tags/v3.10.7:6cc6b13, Sep  5 2022, 14:08:36) [MSC v.1933 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "random_seed": 20260912,
+  "git_commit": null,
+  "git_status": "not a Git repository",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.9",
+    "PyYAML": "6.0.3",
+    "boeing-event-study": "0.1.0"
+  },
+  "source_commit": "14fec12f4af23d69633b6fd37e6d477facf0fa2b",
+  "raw_sha256": {
+    "BA": "c011b154224297b2ba0114f46a340333a58c4c8933754e348baa9c17ecf2da90",
+    "GSPC": "f4344a086323fb65ec4dc261d7a2bf90a8ca28ddb7776f8e3d0aba7a2ccd6b2e",
+    "RTX": "95d6292c0c5d3330b699e6ac17c46221c7b640132dc5480b3792d974c9f41449",
+    "LMT": "395ae7c4f7b13efc3e527e23b748d68f1a43c48562f07d6c8c94add759ba3eda",
+    "NOC": "2b660613f619257f9feedbed93c42aa8e98f5e2a6152142c83ed708902ab81b1",
+    "GD": "3b673f715c16d0dc84bcccde31a1ea8bdf5fcba61a5640e3f15b87f69d6e86be",
+    "TDG": "8d0ccba6d4a12d94a67fd9272756519f025a05284111f39c144eb96c8b7e28a7",
+    "HWM": "f41ed436bddffbfa03f0279b2648f1c4aa342641c505efdfad79f6229795e8a5"
+  },
+  "project_sha256": {
+    "config/analysis.yml": "655fbd3d70610b3ff971ad1e8ed36b5f494cc897958bfcc6b09c9c43b138cef9",
+    "config/event_contamination.csv": "22b36572d6ff997c963ddd544baef50d677909fc0785bffae6b053dd81aef563",
+    "config/events.yml": "3edacf86ff54726dc99413271fdf9d44672983df6d69b7b8a6ba24d278f42f11",
+    "config/replication_resolutions.yml": "92dd0b76b249b0719c76ea4343f7ed682ad7195c6ad8d967bb6ac0ff1111c9fa",
+    "config/replication_review_evidence.json": "31268124215e7b5ff8c26ebdc85aab02dd9eabf529016a252f2b4da92eac6e1a",
+    "scripts/01_download_data.py": "8f50581fce83c05fdd1c09830734d5629b1482236feb37de280ad0b3baa14d3f",
+    "scripts/02_prepare_data.py": "33026a3be73081fb9e1c5a92873af6d90fa0bf435b21f72dcbbacb54d7772942",
+    "scripts/03_run_bayesian_event_study.py": "1072f73e824e26e687b518ff329396531031f96d4f2b750d9fa7479504a229ea",
+    "scripts/04_run_robustness_checks.py": "4a567be01201861f27de74d2db7efb04981369a230538eefcc22eafa30affee2",
+    "scripts/05_make_figures.py": "84d3672470d5407df0afea9e0b764a5bc92ae1310267f5ecf9edcc5e0dd9fb7a",
+    "scripts/06_make_linkedin_chart.py": "0be0c46f14392d1fdbd645e88e1eb680aec37f72966124c2cd19f0ee9cc68f53",
+    "scripts/07_make_linkedin_comparative_car.py": "2c142b60bd67d8e4d19c540c0246c5cbf48204c736536cf86f872b6e16d8b5d2",
+    "scripts/diagnose_predictive_mc.py": "f4dd48d0384cbf59223e334daa92e34fe129c3ed211e4739f65867f0c48939ef",
+    "scripts/run_all.py": "4db7709ca61ea96e51d6999395c659f88758cf0b61e23b45638ef3f0459b2dc0",
+    "src/boeing_event_study/__init__.py": "582d452b2d37c9c7ef701efbcb894d3f56eac1ad6b4d160c96b00367ef38f97f",
+    "src/boeing_event_study/bayes.py": "2387bbae9c0f586f9c47abf9c5df9b6af87a033f8eb50e8e159a4258132b904a",
+    "src/boeing_event_study/download.py": "92dd9cf48617e541064077d4944ce5daf82ebf5d59dae8f50bab6fff8b2a72c2",
+    "src/boeing_event_study/frequentist.py": "1553b953c3d1df50e7d64a4388dcbb7c5cc9af145fe8d9c34fd2a315b7127672",
+    "src/boeing_event_study/placebo.py": "5f591441bbcdec8fd4489b9fa758b9b2315ff30dfe1b6efaf70001e327708913",
+    "src/boeing_event_study/plotting.py": "0924b955473a0046897194cf381a02d6a4eaed32c904bc076f8d24066986ea7f",
+    "src/boeing_event_study/prepare.py": "66c4f33c2b5630a78cef78adf7958ca42401248c63ed61aa81f12157f08b5eb5",
+    "src/boeing_event_study/replication.py": "649b33df1ab903c1e6a4d1e6410948814d9bc3052ab79f7ca6fdf1f18e1036ee",
+    "src/boeing_event_study/utils.py": "58c4d64a4d391f34ee068da06e39095ea93fed7f8b648d31315983dc76922e11",
+    "tests/test_data.py": "ac722454c49656596202f6da51b24eea8ecf8997042b6cd65ef28b8c843828a4",
+    "tests/test_integration.py": "2ef04492817df3728aec88e2b0657691c8b21573e16a958565718925620e11e4",
+    "tests/test_models.py": "b63ac192eec4f9bdf5e59b2dbae4fb7710bc85fea8d3bc860eb139c24c28f405",
+    "tests/test_resolution.py": "4d751490f187ed8b7b70b821a66327cad44fe080c4e5be5d976c1c57d996ae77",
+    "pyproject.toml": "851c5f27a6cf5f13fe07605615f61f240ad5c38135ef74d31d822d412bb0baa6",
+    "uv.lock": "c11532cdd9aef9fb7e92040dc1fb7895ac8ea2a68723ec9f2b62c172150749b0",
+    ".python-version": "7a41a41354ab8049091ef1a00253ca00567f5a1d3f9aef5502c0b4b5ce9ae707",
+    ".gitattributes": "970ab6b0e78aa0f9d6fd9ab13395ce4d3b94275d8ac41b6e2de8a65ea44e0591",
+    "report.py": "a1f8d65a75ece077b3fa8d2a6684bf27156cb5681c63be947fe18be2a84a49ad",
+    "README.md": "16ca7b78dc5030a4208861de8ed14b00bdd483f4dfaf28bbabcc08c76cf38cf0",
+    "LICENSE": "94f2e9231a221786df1966aae56782126a9ed459979e0902fd9a8d24a60756b9",
+    "CITATION.cff": "fbef47e2ec33bf7b2c7ebab51bf1b70bc89d0dc8b63d5a4d04344305562faf82",
+    "report/sources/contamination_research.md": "59494526c7bd1b26c820b8c9edfd0d8ce2709ba893de28791a9c0f51a4bce6ba",
+    "report/sources/provenance.md": "f871f9226533ebaddd2f4a9e830c1ce83c2793218aa4556dd54dc3514f9e724d"
+  },
+  "analysis_config": {
+    "seed": 20260912,
+    "source_repository": "zjplab/US-Trading-Data",
+    "source_commit": "14fec12f4af23d69633b6fd37e6d477facf0fa2b",
+    "source_paths": {
+      "BA": "data/SP500/BA.csv",
+      "GSPC": "data/Indexes/^GSPC.csv",
+      "RTX": "data/SP500/RTX.csv",
+      "LMT": "data/SP500/LMT.csv",
+      "NOC": "data/SP500/NOC.csv",
+      "GD": "data/SP500/GD.csv",
+      "TDG": "data/SP500/TDG.csv",
+      "HWM": "data/SP500/HWM.csv"
+    },
+    "peers": [
+      "RTX",
+      "LMT",
+      "NOC",
+      "GD",
+      "TDG",
+      "HWM"
+    ],
+    "minimum_peers": 5,
+    "estimation_window": [
+      -250,
+      -30
+    ],
+    "event_range": [
+      -5,
+      10
+    ],
+    "windows": {
+      "[0,0]": [
+        0,
+        0
+      ],
+      "[-1,+1]": [
+        -1,
+        1
+      ],
+      "[-3,+3]": [
+        -3,
+        3
+      ],
+      "[0,+5]": [
+        0,
+        5
+      ],
+      "[0,+10]": [
+        0,
+        10
+      ]
+    },
+    "model": {
+      "nu": 5,
+      "prior_mean": [
+        0,
+        1,
+        1
+      ],
+      "prior_sd": [
+        0.01,
+        1,
+        1
+      ],
+      "sigma2_shape": 2,
+      "sigma2_scale": 0.0004,
+      "burn_in": 2000,
+      "retained_draws": 4000,
+      "thinning": 3
+    }
+  },
+  "return_convention": "simple Close returns; source history auto-adjusted Close used without further adjustment"
+}

@@ -1,0 +1,41 @@
+id: AS12-NETFLIX10-1
+classification: reviewed_reference_difference
+reviewed_check:
+  event: netflix
+  window: '[0,+10]'
+  metric: median
+  target: 0.0141
+  actual: 0.017956256787908575
+  tolerance: 0.0035
+bound_file_sha256:
+  config/analysis.yml: 655fbd3d70610b3ff971ad1e8ed36b5f494cc897958bfcc6b09c9c43b138cef9
+  config/events.yml: 3edacf86ff54726dc99413271fdf9d44672983df6d69b7b8a6ba24d278f42f11
+  data/data_manifest.csv: b4e8ef8d830fd94c50812345336e10f2ac7952e2976f87175070d88c2255dee8
+  src/boeing_event_study/bayes.py: 2387bbae9c0f586f9c47abf9c5df9b6af87a033f8eb50e8e159a4258132b904a
+  src/boeing_event_study/prepare.py: 66c4f33c2b5630a78cef78adf7958ca42401248c63ed61aa81f12157f08b5eb5
+  scripts/diagnose_predictive_mc.py: f4dd48d0384cbf59223e334daa92e34fe129c3ed211e4739f65867f0c48939ef
+  src/boeing_event_study/utils.py: 58c4d64a4d391f34ee068da06e39095ea93fed7f8b648d31315983dc76922e11
+  src/boeing_event_study/download.py: 92dd9cf48617e541064077d4944ce5daf82ebf5d59dae8f50bab6fff8b2a72c2
+  uv.lock: c11532cdd9aef9fb7e92040dc1fb7895ac8ea2a68723ec9f2b62c172150749b0
+  pyproject.toml: 851c5f27a6cf5f13fe07605615f61f240ad5c38135ef74d31d822d412bb0baa6
+  .python-version: 7a41a41354ab8049091ef1a00253ca00567f5a1d3f9aef5502c0b4b5ce9ae707
+  config/replication_review_evidence.json: 31268124215e7b5ff8c26ebdc85aab02dd9eabf529016a252f2b4da92eac6e1a
+  src/boeing_event_study/replication.py: 649b33df1ab903c1e6a4d1e6410948814d9bc3052ab79f7ca6fdf1f18e1036ee
+posterior_semantic_sha256: 3e3b0a69013f9a9be2dbc3491fd9fdc0437326a66bd7abb187796767c5055717
+approval: Parent accepted AS12 diagnosis after independent equation/data audit and
+  a bounded 32-replicate diagnostic; original failed tolerance remains false.
+rationale: Return construction, calendar alignment, 221-row windows, independent priors
+  and Gamma conventions were checked. Fresh predictive medians vary around 1.59%;
+  the original 1.41% reference and preserved 1.7956% production estimate differ. Monte
+  Carlo variation is plausible, but the exact origin cannot be established without
+  the original chain, source snapshot and RNG implementation. This does not change
+  the substantive wide-interval conclusion.
+limitations: This resolution applies only to the bound source/config/dependency/data/evidence/check.
+  The semantic posterior fingerprint is audit evidence. It is not an exact-replication
+  claim, proof of Monte Carlo error, or permission to waive other numerical differences.
+posterior_fingerprint_policy: 'Audit only: byte mismatch is reported but does not
+  independently block an unchanged bound model/data/target within 1e-12, allowing
+  harmless floating-point differences across runtimes.'
+current_diagnostic_policy: Regenerate outputs/logs/netflix_predictive_mc_diagnostic.json
+  from current posterior draws every run. Only the archived original review evidence
+  in config is immutable and hash-bound.

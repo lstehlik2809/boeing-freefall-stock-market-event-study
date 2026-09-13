@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+dist/
+data/raw/*.csv
+data/processed/*.csv
+outputs/logs/implementation_report.md
+.reproduction-check/
+.env
+.env.*

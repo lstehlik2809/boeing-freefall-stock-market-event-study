@@ -1,0 +1,2 @@
+# Preserve frozen hashes across clones, regardless of core.autocrlf.
+* -text

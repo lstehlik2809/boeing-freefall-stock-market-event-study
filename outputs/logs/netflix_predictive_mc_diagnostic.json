@@ -1,0 +1,63 @@
+{
+  "timestamp_utc": "2026-09-13T07:59:52.540580+00:00",
+  "production_posterior_semantic_sha256": "3e3b0a69013f9a9be2dbc3491fd9fdc0437326a66bd7abb187796767c5055717",
+  "purpose": "Current diagnostic only; immutable original review evidence is config/replication_review_evidence.json",
+  "diagnostic_seed_entropy": [
+    20260912,
+    999
+  ],
+  "independent_predictive_replicates": 32,
+  "draws_per_replicate": 4000,
+  "target": 0.0141,
+  "production_median": 0.017956256787908575,
+  "parameter_only_mean": 0.015892227129725458,
+  "parameter_only_median": 0.015957283413363006,
+  "replicate_medians": [
+    0.0139377859480268,
+    0.016494987788631447,
+    0.016642802601950207,
+    0.016598193983512425,
+    0.015686224777825473,
+    0.015892252046420044,
+    0.016560587117310857,
+    0.015599621018874256,
+    0.01713378142074464,
+    0.015267643310001255,
+    0.015442895765768506,
+    0.016315577321681804,
+    0.014706684174739386,
+    0.015536437247404312,
+    0.015297654691605139,
+    0.015779786280542246,
+    0.016575319974474537,
+    0.015518568000710978,
+    0.017197376735257543,
+    0.0159092580056213,
+    0.01623564179840918,
+    0.015129059538518928,
+    0.016307507322313678,
+    0.014365442867884288,
+    0.015660084699875506,
+    0.015925919389966958,
+    0.015848567914713247,
+    0.015863323336774728,
+    0.016857408740771573,
+    0.016456649701628315,
+    0.01672342689320154,
+    0.01541959175538178
+  ],
+  "replicate_median_mean": 0.015902689442829465,
+  "replicate_median_sd": 0.000756970538535777,
+  "replicate_median_range": [
+    0.0139377859480268,
+    0.017197376735257543
+  ],
+  "replicate_median_95pct_range": [
+    0.014269220060916353,
+    0.017148090366510042
+  ],
+  "pooled_128000_predictive_median": 0.015889426013881096,
+  "target_distance_in_replicate_sd": -2.3814525811221703,
+  "production_distance_in_replicate_sd": 2.7128761828054313,
+  "limitations": "Original implementation and RNG stream are unavailable; Monte Carlo plausibility is not proof of exact cause. Conditional fresh-noise replications exclude uncertainty from rerunning coefficient chains."
+}
