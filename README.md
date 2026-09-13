@@ -1,6 +1,6 @@
 # Did Netflix's *Freefall* move Boeing's stock? A Bayesian event study
 
-Reproducible data acquisition, Python analysis, and results accompanying Ludek Stehlik's [LinkedIn post](docs/linkedin-post.md) about *Freefall: A Reckoning for Boeing*. The question is whether the documentary's release coincided with a negative Boeing stock-market response, conditional on broad-market and aerospace/defense returns. The January 2024 Alaska Airlines door-plug incident and June 2024 Dave Calhoun Senate hearing provide two specific comparisons.
+Reproducible data acquisition, Python analysis, and results accompanying my [LinkedIn post](docs/linkedin-post.md) about *Freefall: A Reckoning for Boeing*. The question is whether the documentary's release coincided with a negative Boeing stock-market response, conditional on broad-market and aerospace/defense returns. The January 2024 Alaska Airlines door-plug incident and June 2024 Dave Calhoun Senate hearing provide two specific comparisons.
 
 **Finding:** the Netflix release shows no clearly distinguishable negative response in the examined windows. Its three-day cumulative abnormal return (CAR) has a posterior predictive median of **−1.20%**, with a **95% credible interval of −6.82% to +4.71%**. This uncertainty does not rule out an economically meaningful effect. Share prices also cannot establish whether the film changed public trust, reputation, or employer attractiveness.
 
